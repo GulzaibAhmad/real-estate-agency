@@ -96,7 +96,7 @@ export default function CTA() {
                 href="https://calendly.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-secondary-accent px-8 py-4 text-sm font-semibold text-primary transition-all hover:bg-secondary-accent/90"
+                className="group inline-flex items-center gap-2 rounded-full bg-secondary-accent px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-secondary-accent/90"
               >
                 Book Free Strategy Call
                 <ArrowRight
@@ -228,7 +228,7 @@ export default function CTA() {
 
                         <button
                           type="submit"
-                          className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-secondary-accent py-3 text-sm font-semibold text-primary transition-all hover:bg-secondary-accent/90"
+                          className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-secondary-accent py-3 text-sm font-semibold text-white transition-all hover:bg-secondary-accent/90"
                         >
                           <Send size={16} />
                           Send Message

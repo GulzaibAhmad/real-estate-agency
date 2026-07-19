@@ -53,7 +53,7 @@ export default function Process() {
                   <div className="relative mx-auto mb-6">
                     <div className="relative z-10 mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-secondary-accent shadow-lg shadow-secondary-accent/20">
                       {Icon && (
-                        <Icon className="h-8 w-8 text-primary" />
+                        <Icon className="h-8 w-8 text-white" />
                       )}
                     </div>
                     <span className="absolute -top-3 -right-3 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-white text-xs font-bold text-primary shadow-lg">

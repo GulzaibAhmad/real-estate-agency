@@ -42,6 +42,11 @@ export const metadata: Metadata = {
     description:
       "NexXaBase helps real estate agencies automate lead management, CRM workflows, client communication, document generation, AI voice agents, WhatsApp automation, and appointment scheduling to improve operational efficiency and close more deals.",
   },
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({

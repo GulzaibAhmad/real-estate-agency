@@ -77,7 +77,7 @@ export default function Hero() {
                     .querySelector("#contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-secondary-accent px-7 py-3.5 text-sm font-semibold text-primary transition-all hover:bg-secondary-accent/90"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-secondary-accent px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-secondary-accent/90"
               >
                 Book Free Consultation
                 <ArrowRight
@@ -208,8 +208,8 @@ export default function Hero() {
                 className="absolute -bottom-4 -left-6 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm"
               >
                 <div className="flex items-center gap-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-highlight/20">
-                    <Bot className="h-4 w-4 text-highlight" />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary-accent/20">
+                    <Bot className="h-4 w-4 text-secondary-accent" />
                   </div>
                   <div>
                     <p className="text-xs text-white/40">Conversations</p>

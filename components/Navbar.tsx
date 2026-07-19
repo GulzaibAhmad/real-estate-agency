@@ -89,7 +89,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <button
             onClick={() => handleClick("#contact")}
-            className="rounded-full bg-secondary-accent px-5 py-2.5 text-sm font-semibold text-primary transition-all hover:bg-secondary-accent/90"
+            className="rounded-full bg-secondary-accent px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-secondary-accent/90"
           >
             Book Consultation
           </button>
