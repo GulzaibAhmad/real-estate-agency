@@ -4,7 +4,7 @@ export const stats: Stat[] = [
   {
     id: 1,
     value: "250+",
-    label: "Automations Delivered",
+    label: "Automations Deployed",
   },
   {
     id: 2,
@@ -19,11 +19,11 @@ export const stats: Stat[] = [
   {
     id: 4,
     value: "24/7",
-    label: "Automation Running",
+    label: "Systems Running",
   },
   {
     id: 5,
     value: "100+",
-    label: "Businesses Served",
+    label: "Brokerages Served",
   },
 ];

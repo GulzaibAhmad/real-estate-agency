@@ -49,55 +49,54 @@ export default function CTA() {
   }
 
   return (
-    <section id="contact" className="bg-slate-50 py-24 sm:py-32">
+    <section id="contact" className="bg-primary py-24 sm:py-32">
       <div ref={ref} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-secondary p-12 sm:p-16 lg:p-20"
+          transition={{ duration: 0.6 }}
+          className="relative overflow-hidden rounded-3xl bg-primary-accent p-12 sm:p-16 lg:p-20"
         >
           <div className="absolute inset-0">
-            <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-secondary/20 blur-3xl" />
-            <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
-            <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl" />
+            <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-secondary-accent/10 blur-3xl" />
+            <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-highlight/5 blur-3xl" />
           </div>
 
           <div className="relative text-center">
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl"
             >
               Ready to Automate Your{" "}
-              <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-                Real Estate Business?
+              <span className="text-secondary-accent">
+                Brokerage?
               </span>
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mx-auto mt-6 max-w-2xl text-lg text-slate-300"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mx-auto mt-6 max-w-2xl text-lg text-neutral/70"
             >
-              Book a free 30-minute strategy call with our AI automation experts.
-              We&apos;ll analyze your workflows and show you exactly how AI can save
-              you hundreds of hours and boost your revenue.
+              Book a free 30-minute strategy call. We will analyze your brokerage
+              operations and show you exactly how AI can save time and increase
+              conversions.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
             >
               <a
                 href="https://calendly.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-primary shadow-xl transition-all hover:bg-accent hover:text-white hover:shadow-2xl"
+                className="group inline-flex items-center gap-2 rounded-full bg-secondary-accent px-8 py-4 text-sm font-semibold text-primary transition-all hover:bg-secondary-accent/90"
               >
                 Book Free Strategy Call
                 <ArrowRight
@@ -113,7 +112,7 @@ export default function CTA() {
                     setFormData({ name: "", email: "", message: "" });
                   }
                 }}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition-all hover:border-white/40 hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition-all hover:border-white/30 hover:bg-white/5"
               >
                 <Mail size={16} />
                 {formOpen ? "Close Form" : "Or Email Us"}
@@ -136,14 +135,14 @@ export default function CTA() {
                         animate={{ opacity: 1, scale: 1 }}
                         className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm"
                       >
-                        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent/20">
-                          <CheckCircle className="h-7 w-7 text-accent" />
+                        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-secondary-accent/20">
+                          <CheckCircle className="h-7 w-7 text-secondary-accent" />
                         </div>
                         <h3 className="text-xl font-bold text-white">
-                          Message Sent!
+                          Message Sent
                         </h3>
-                        <p className="mt-2 text-sm text-slate-300">
-                          Thanks for reaching out. We&apos;ll get back to you within 24 hours.
+                        <p className="mt-2 text-sm text-neutral/70">
+                          We will get back to you within 24 hours.
                         </p>
                       </motion.div>
                     ) : (
@@ -160,7 +159,7 @@ export default function CTA() {
                           <div>
                             <label
                               htmlFor="cta-name"
-                              className="mb-1.5 block text-sm font-medium text-slate-300"
+                              className="mb-1.5 block text-sm font-medium text-neutral/70"
                             >
                               Full Name
                             </label>
@@ -171,7 +170,7 @@ export default function CTA() {
                               value={formData.name}
                               onChange={handleChange}
                               placeholder="John Doe"
-                              className={`w-full rounded-xl border bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-colors focus:border-accent focus:ring-1 focus:ring-accent ${
+                              className={`w-full rounded-xl border bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors focus:border-secondary-accent focus:ring-1 focus:ring-secondary-accent ${
                                 errors.name ? "border-red-400" : "border-white/10"
                               }`}
                             />
@@ -183,7 +182,7 @@ export default function CTA() {
                           <div>
                             <label
                               htmlFor="cta-email"
-                              className="mb-1.5 block text-sm font-medium text-slate-300"
+                              className="mb-1.5 block text-sm font-medium text-neutral/70"
                             >
                               Email Address
                             </label>
@@ -193,8 +192,8 @@ export default function CTA() {
                               type="email"
                               value={formData.email}
                               onChange={handleChange}
-                              placeholder="john@company.com"
-                              className={`w-full rounded-xl border bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-colors focus:border-accent focus:ring-1 focus:ring-accent ${
+                              placeholder="john@brokerage.com"
+                              className={`w-full rounded-xl border bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors focus:border-secondary-accent focus:ring-1 focus:ring-secondary-accent ${
                                 errors.email ? "border-red-400" : "border-white/10"
                               }`}
                             />
@@ -206,7 +205,7 @@ export default function CTA() {
                           <div>
                             <label
                               htmlFor="cta-message"
-                              className="mb-1.5 block text-sm font-medium text-slate-300"
+                              className="mb-1.5 block text-sm font-medium text-neutral/70"
                             >
                               Message
                             </label>
@@ -216,8 +215,8 @@ export default function CTA() {
                               rows={4}
                               value={formData.message}
                               onChange={handleChange}
-                              placeholder="Tell us about your automation needs..."
-                              className={`w-full resize-none rounded-xl border bg-white/5 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-colors focus:border-accent focus:ring-1 focus:ring-accent ${
+                              placeholder="Tell us about your brokerage and automation goals..."
+                              className={`w-full resize-none rounded-xl border bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors focus:border-secondary-accent focus:ring-1 focus:ring-secondary-accent ${
                                 errors.message ? "border-red-400" : "border-white/10"
                               }`}
                             />
@@ -229,7 +228,7 @@ export default function CTA() {
 
                         <button
                           type="submit"
-                          className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-accent py-3 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:bg-accent/90 hover:shadow-accent/40"
+                          className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-secondary-accent py-3 text-sm font-semibold text-primary transition-all hover:bg-secondary-accent/90"
                         >
                           <Send size={16} />
                           Send Message

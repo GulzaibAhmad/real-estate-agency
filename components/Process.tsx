@@ -11,17 +11,17 @@ export default function Process() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="process" className="bg-slate-50 py-24 sm:py-32">
+    <section id="process" className="bg-primary py-24 sm:py-32">
       <div ref={ref} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle
           badge="Our Process"
           title="How We Work"
-          description="A proven four-step process that transforms your real estate operations with AI automation — from discovery to continuous optimization."
+          description="A proven four-step process that transforms your brokerage operations with AI automation — from discovery to continuous optimization."
+          dark
         />
 
         <div className="relative mt-8">
-          {/* Connection line - desktop only */}
-          <div className="absolute top-24 left-0 hidden h-px w-full bg-gradient-to-r from-transparent via-secondary/20 to-transparent lg:block" />
+          <div className="absolute top-24 left-0 hidden h-px w-full bg-gradient-to-r from-transparent via-secondary-accent/20 to-transparent lg:block" />
 
           <motion.div
             initial="hidden"
@@ -30,7 +30,7 @@ export default function Process() {
               hidden: { opacity: 0 },
               visible: {
                 opacity: 1,
-                transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+                transition: { staggerChildren: 0.12, delayChildren: 0.3 },
               },
             }}
             className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
@@ -41,30 +41,30 @@ export default function Process() {
                 <motion.div
                   key={step.id}
                   variants={{
-                    hidden: { opacity: 0, y: 40 },
+                    hidden: { opacity: 0, y: 30 },
                     visible: {
                       opacity: 1,
                       y: 0,
-                      transition: { duration: 0.6 },
+                      transition: { duration: 0.5 },
                     },
                   }}
                   className="relative text-center"
                 >
                   <div className="relative mx-auto mb-6">
-                    <div className="relative z-10 mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary to-secondary/80 shadow-xl shadow-secondary/20">
+                    <div className="relative z-10 mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-secondary-accent shadow-lg shadow-secondary-accent/20">
                       {Icon && (
-                        <Icon className="h-8 w-8 text-white" />
+                        <Icon className="h-8 w-8 text-primary" />
                       )}
                     </div>
-                    <span className="absolute -top-3 -right-3 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-white text-xs font-bold text-secondary shadow-lg">
+                    <span className="absolute -top-3 -right-3 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-white text-xs font-bold text-primary shadow-lg">
                       {step.step}
                     </span>
                   </div>
 
-                  <h3 className="mb-2 text-xl font-bold text-primary">
+                  <h3 className="mb-2 text-xl font-bold text-white">
                     {step.title}
                   </h3>
-                  <p className="mx-auto max-w-xs text-sm leading-relaxed text-slate-500">
+                  <p className="mx-auto max-w-xs text-sm leading-relaxed text-neutral/70">
                     {step.description}
                   </p>
                 </motion.div>

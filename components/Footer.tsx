@@ -36,16 +36,11 @@ function FacebookIcon({ className }: { className?: string }) {
   );
 }
 
-const socialIconComponents = [
-  LinkedInIcon,
-  TwitterIcon,
-  InstagramIcon,
-  FacebookIcon,
-];
+const socialIconComponents = [LinkedInIcon, TwitterIcon, InstagramIcon, FacebookIcon];
 
 export default function Footer() {
   return (
-    <footer className="bg-primary">
+    <footer className="bg-[#02001f]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
@@ -57,22 +52,21 @@ export default function Footer() {
               <Image
                 src="https://nexxa-base-website.vercel.app/assets/imgs/nexxa/logo/logo.svg"
                 alt="NexXaBase Logo"
-                width={150} // Next.js requires baseline dimensions
+                width={150}
                 height={50}
-                className="w-[120px] h-auto" // Forces the height to scale proportionally
+                className="w-[120px] h-auto"
               />
             </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
-              NexXaBase helps real estate companies automate lead generation,
-              CRM, AI chatbots, WhatsApp automation, appointment scheduling, and
-              more with cutting-edge AI technology.
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/40">
+              AI automation built exclusively for real estate agencies,
+              brokerages, and property teams.
             </p>
             <div className="mt-6 flex items-center gap-3">
               {socialIconComponents.map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 text-slate-400 transition-all hover:bg-secondary/20 hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 text-white/30 transition-all hover:bg-secondary-accent/20 hover:text-white"
                   aria-label={`Social link ${i + 1}`}
                 >
                   <Icon className="h-4 w-4" />
@@ -90,7 +84,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-400 transition-colors hover:text-white"
+                    className="text-sm text-white/40 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -108,7 +102,7 @@ export default function Footer() {
                 <li key={`${link.label}-${i}`}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-400 transition-colors hover:text-white"
+                    className="text-sm text-white/40 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -121,7 +115,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
               Get in Touch
             </h3>
-            <ul className="mt-4 space-y-3 text-sm text-slate-400">
+            <ul className="mt-4 space-y-3 text-sm text-white/40">
               <li>hello@nexxabase.com</li>
               <li>+1 (555) 123-4567</li>
               <li>San Francisco, CA</li>
@@ -130,7 +124,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 border-t border-white/10 pt-8 text-center">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-white/30">
             &copy; {new Date().getFullYear()} NexXaBase. All rights reserved.
           </p>
         </div>

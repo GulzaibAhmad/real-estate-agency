@@ -9,10 +9,10 @@ export default function Stats() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative overflow-hidden bg-primary py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-primary-accent py-24 sm:py-32">
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 h-64 w-64 rounded-full bg-secondary/10 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute top-0 left-1/4 h-64 w-64 rounded-full bg-secondary-accent/5 blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-highlight/5 blur-3xl" />
       </div>
 
       <div ref={ref} className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@ export default function Stats() {
             hidden: { opacity: 0 },
             visible: {
               opacity: 1,
-              transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+              transition: { staggerChildren: 0.08, delayChildren: 0.2 },
             },
           }}
           className="grid grid-cols-2 gap-8 md:grid-cols-5"
@@ -32,11 +32,11 @@ export default function Stats() {
             <motion.div
               key={stat.id}
               variants={{
-                hidden: { opacity: 0, y: 20 },
+                hidden: { opacity: 0, y: 15 },
                 visible: {
                   opacity: 1,
                   y: 0,
-                  transition: { duration: 0.5 },
+                  transition: { duration: 0.4 },
                 },
               }}
               className="text-center"
@@ -44,7 +44,7 @@ export default function Stats() {
               <div className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
                 {stat.value}
               </div>
-              <div className="mt-2 text-sm text-slate-400 sm:text-base">
+              <div className="mt-2 text-sm text-neutral/60 sm:text-base">
                 {stat.label}
               </div>
             </motion.div>

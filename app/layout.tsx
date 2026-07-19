@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Manrope } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "NexXaBase | AI Automation Agency for Real Estate",
   description:
-    "NexXaBase helps real estate companies automate lead generation, CRM, AI chatbots, WhatsApp automation, appointment scheduling, AI voice agents, SMS marketing, document generation, and more.",
+    "NexXaBase helps real estate agencies automate lead management, CRM workflows, client communication, document generation, AI voice agents, WhatsApp automation, and appointment scheduling to improve operational efficiency and close more deals.",
   keywords: [
     "AI automation",
     "real estate",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NexXaBase | AI Automation Agency for Real Estate",
     description:
-      "NexXaBase helps real estate companies automate lead generation, CRM, AI chatbots, WhatsApp automation, appointment scheduling, AI voice agents, SMS marketing, document generation, and more.",
+      "NexXaBase helps real estate agencies automate lead management, CRM workflows, client communication, document generation, AI voice agents, WhatsApp automation, and appointment scheduling to improve operational efficiency and close more deals.",
     type: "website",
     locale: "en_US",
     siteName: "NexXaBase",
@@ -38,12 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NexXaBase | AI Automation Agency for Real Estate",
     description:
-      "NexXaBase helps real estate companies automate lead generation, CRM, AI chatbots, WhatsApp automation, appointment scheduling, AI voice agents, SMS marketing, document generation, and more.",
-  },
-  icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
-    apple: "/logo.svg",
+      "NexXaBase helps real estate agencies automate lead management, CRM workflows, client communication, document generation, AI voice agents, WhatsApp automation, and appointment scheduling to improve operational efficiency and close more deals.",
   },
 };
 
@@ -55,7 +52,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

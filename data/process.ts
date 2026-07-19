@@ -4,33 +4,33 @@ export const processSteps: ProcessStep[] = [
   {
     id: 1,
     step: "01",
-    title: "Discover",
+    title: "Discovery",
     description:
-      "We dive deep into your current workflows, pain points, and goals to identify where automation will have the biggest impact.",
+      "We understand your brokerage workflows, pain points, and goals to identify where automation creates the most impact.",
     icon: "Search",
   },
   {
     id: 2,
     step: "02",
-    title: "Design",
+    title: "Automation Strategy",
     description:
-      "Our team designs custom AI automation blueprints tailored to your real estate operations and brand requirements.",
+      "We design AI systems around your existing operations, ensuring every automation aligns with how your team works.",
     icon: "Palette",
   },
   {
     id: 3,
     step: "03",
-    title: "Deploy",
+    title: "Implementation",
     description:
-      "We build, test, and launch your AI systems with seamless integration into your existing tech stack.",
+      "We deploy automation with minimal disruption, integrating seamlessly into your current tech stack.",
     icon: "Rocket",
   },
   {
     id: 4,
     step: "04",
-    title: "Optimize",
+    title: "Optimization",
     description:
-      "Continuous monitoring, data analysis, and iteration ensure your automations perform better over time.",
+      "We continuously improve workflows based on performance data to deliver better business outcomes over time.",
     icon: "BarChart",
   },
 ];

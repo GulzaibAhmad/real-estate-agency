@@ -11,12 +11,12 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="bg-slate-50 py-24 sm:py-32">
+    <section id="services" className="bg-white py-24 sm:py-32">
       <div ref={ref} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle
           badge="Our Services"
-          title="Our AI Automation Services"
-          description="End-to-end automation solutions designed specifically for the real estate industry. From lead capture to closing, we automate every step."
+          title="Automation That Drives Results"
+          description="End-to-end AI automation built specifically for real estate agencies and brokerages — from lead capture to closed deals."
         />
 
         <motion.div
@@ -26,7 +26,7 @@ export default function Services() {
             hidden: { opacity: 0 },
             visible: {
               opacity: 1,
-              transition: { staggerChildren: 0.06, delayChildren: 0.2 },
+              transition: { staggerChildren: 0.05, delayChildren: 0.2 },
             },
           }}
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
@@ -37,30 +37,27 @@ export default function Services() {
               <motion.div
                 key={service.id}
                 variants={{
-                  hidden: { opacity: 0, y: 30 },
+                  hidden: { opacity: 0, y: 20 },
                   visible: {
                     opacity: 1,
                     y: 0,
-                    transition: { duration: 0.5 },
+                    transition: { duration: 0.4 },
                   },
                 }}
-                whileHover={{ y: -6 }}
-                className="group relative overflow-hidden rounded-2xl border border-slate-200/60 bg-white p-7 shadow-sm transition-all hover:shadow-xl hover:shadow-slate-200/50"
+                whileHover={{ y: -4 }}
+                className="group rounded-2xl border border-neutral bg-white p-7 transition-all hover:border-secondary-accent/30 hover:shadow-lg hover:shadow-secondary-accent/5"
               >
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary/5 to-accent/5 opacity-0 transition-opacity group-hover:opacity-100" />
-                <div className="relative">
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/10 transition-colors group-hover:bg-secondary/20">
-                    {Icon && (
-                      <Icon className="h-6 w-6 text-secondary" />
-                    )}
-                  </div>
-                  <h3 className="mb-2 text-lg font-semibold text-primary">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-slate-500">
-                    {service.description}
-                  </p>
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/5 transition-colors group-hover:bg-secondary-accent/10">
+                  {Icon && (
+                    <Icon className="h-6 w-6 text-primary-accent transition-colors group-hover:text-secondary-accent" />
+                  )}
                 </div>
+                <h3 className="mb-2 text-lg font-semibold text-primary">
+                  {service.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-foreground/60">
+                  {service.description}
+                </p>
               </motion.div>
             );
           })}

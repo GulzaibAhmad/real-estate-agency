@@ -21,8 +21,8 @@ function FAQItem({
     <div
       className={`overflow-hidden rounded-2xl border transition-all duration-300 ${
         isOpen
-          ? "border-secondary/20 bg-white shadow-lg shadow-secondary/5"
-          : "border-slate-200/60 bg-white hover:border-slate-300/60 hover:shadow-md"
+          ? "border-secondary-accent/30 bg-white shadow-lg shadow-secondary-accent/5"
+          : "border-neutral bg-white hover:border-foreground/15 hover:shadow-md"
       }`}
     >
       <button
@@ -32,7 +32,7 @@ function FAQItem({
       >
         <span
           className={`text-base font-semibold transition-colors ${
-            isOpen ? "text-secondary" : "text-primary"
+            isOpen ? "text-primary-accent" : "text-primary"
           }`}
         >
           {question}
@@ -40,8 +40,8 @@ function FAQItem({
         <span
           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors ${
             isOpen
-              ? "bg-secondary/10 text-secondary"
-              : "bg-slate-100 text-slate-500"
+              ? "bg-secondary-accent/10 text-secondary-accent"
+              : "bg-neutral text-foreground/40"
           }`}
         >
           <motion.span
@@ -64,7 +64,7 @@ function FAQItem({
             className="overflow-hidden"
           >
             <div className="px-6 pb-5">
-              <p className="text-sm leading-relaxed text-slate-500">
+              <p className="text-sm leading-relaxed text-foreground/60">
                 {answer}
               </p>
             </div>
@@ -85,18 +85,18 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="bg-white py-24 sm:py-32">
+    <section id="faq" className="bg-neutral py-24 sm:py-32">
       <div ref={ref} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle
           badge="FAQ"
           title="Frequently Asked Questions"
-          description="Everything you need to know about our AI automation solutions for real estate businesses."
+          description="Everything you need to know about our AI automation solutions for real estate agencies and brokerages."
         />
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="mx-auto grid max-w-5xl gap-4 lg:grid-cols-2"
         >
           {faqs.map((faq) => (

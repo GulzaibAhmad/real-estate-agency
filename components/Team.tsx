@@ -23,8 +23,8 @@ export default function Team() {
       <div ref={ref} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle
           badge="Our Team"
-          title="Meet Our Experts"
-          description="A passionate team of AI engineers, real estate strategists, and automation specialists dedicated to transforming your business."
+          title="Meet the Experts Behind NexXaBase"
+          description="A focused team of AI engineers, real estate strategists, and automation specialists building the systems that help brokerages scale."
         />
 
         <motion.div
@@ -34,32 +34,32 @@ export default function Team() {
             hidden: { opacity: 0 },
             visible: {
               opacity: 1,
-              transition: { staggerChildren: 0.12, delayChildren: 0.2 },
+              transition: { staggerChildren: 0.1, delayChildren: 0.2 },
             },
           }}
-          className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           {teamMembers.map((member) => (
             <motion.div
               key={member.id}
               variants={{
-                hidden: { opacity: 0, y: 30 },
+                hidden: { opacity: 0, y: 20 },
                 visible: {
                   opacity: 1,
                   y: 0,
-                  transition: { duration: 0.5 },
+                  transition: { duration: 0.4 },
                 },
               }}
-              whileHover={{ y: -8 }}
-              className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-xl hover:shadow-slate-200/50"
+              whileHover={{ y: -4 }}
+              className="group overflow-hidden rounded-2xl border border-neutral bg-white transition-all hover:shadow-xl hover:shadow-primary/5"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+              <div className="relative aspect-[4/3] overflow-hidden bg-neutral">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
                   className="object-contain transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
@@ -67,21 +67,21 @@ export default function Team() {
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-secondary shadow-lg backdrop-blur-sm transition-all hover:bg-secondary hover:text-white opacity-0 group-hover:opacity-100"
+                  className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary-accent shadow-lg backdrop-blur-sm transition-all hover:bg-secondary-accent hover:text-primary opacity-0 group-hover:opacity-100"
                   aria-label={`${member.name} LinkedIn`}
                 >
                   <LinkedInIcon className="h-4 w-4" />
                 </a>
               </div>
 
-              <div className="p-5">
+              <div className="p-6">
                 <h3 className="text-lg font-bold text-primary">
                   {member.name}
                 </h3>
-                <p className="mt-0.5 text-sm font-medium text-secondary">
+                <p className="mt-0.5 text-sm font-medium text-secondary-accent">
                   {member.designation}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-slate-500">
+                <p className="mt-3 text-sm leading-relaxed text-foreground/60">
                   {member.description}
                 </p>
               </div>

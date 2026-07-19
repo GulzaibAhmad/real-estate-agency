@@ -17,10 +17,3 @@ export const serviceLinks: FooterLink[] = [
   { label: "AI Voice Agents", href: "#services" },
   { label: "Document Generation", href: "#services" },
 ];
-
-export const socialLinks: FooterLink[] = [
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "Twitter", href: "https://twitter.com" },
-  { label: "Instagram", href: "https://instagram.com" },
-  { label: "Facebook", href: "https://facebook.com" },
-];

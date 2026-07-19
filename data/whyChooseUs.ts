@@ -3,58 +3,58 @@ import type { WhyChooseUs } from "@/types";
 export const whyChooseUs: WhyChooseUs[] = [
   {
     id: 1,
-    title: "Save Hundreds of Hours",
+    title: "Built Exclusively For Real Estate",
     description:
-      "Automate repetitive tasks and free your team to focus on closing deals, not managing spreadsheets.",
-    icon: "Clock",
+      "Every automation is designed specifically for agencies, brokerages, and property teams — not generic businesses.",
+    icon: "Building2",
   },
   {
     id: 2,
-    title: "Increase Lead Conversion",
+    title: "AI-First Automation Systems",
     description:
-      "AI-driven follow-ups and scoring ensure no lead falls through the cracks, boosting your close rate.",
-    icon: "TrendingUp",
-  },
-  {
-    id: 3,
-    title: "24/7 AI Systems",
-    description:
-      "Your AI works around the clock — capturing leads, answering queries, and scheduling meetings while you sleep.",
+      "Intelligent systems that learn, adapt, and improve your operations continuously — not just simple workflows.",
     icon: "Zap",
   },
   {
-    id: 4,
-    title: "Reduce Manual Work",
+    id: 3,
+    title: "Faster Lead Response",
     description:
-      "Eliminate data entry, copy-pasting, and manual communication with intelligent automation workflows.",
+      "Respond to every inquiry within seconds, not hours. Speed wins in real estate, and AI never sleeps.",
+    icon: "Clock",
+  },
+  {
+    id: 4,
+    title: "Reduce Administrative Work",
+    description:
+      "Eliminate data entry, manual follow-ups, and repetitive tasks that keep your team from closing deals.",
     icon: "Minimize2",
   },
   {
     id: 5,
-    title: "CRM Integration",
+    title: "Increase Conversion Rates",
     description:
-      "Seamlessly connect with your existing CRM tools like HubSpot, Salesforce, and custom platforms.",
-    icon: "Link",
+      "Automated follow-ups, lead scoring, and instant engagement help convert more leads into closed transactions.",
+    icon: "TrendingUp",
   },
   {
     id: 6,
-    title: "WhatsApp Automation",
+    title: "Scale Without Hiring",
     description:
-      "Engage prospects on WhatsApp with automated sequences, chatbots, and instant property updates.",
-    icon: "MessageSquare",
+      "Handle more leads, listings, and clients without proportionally increasing your administrative team.",
+    icon: "Layers",
   },
   {
     id: 7,
-    title: "Enterprise Ready",
+    title: "Reliable CRM Integration",
     description:
-      "Built for scale with robust architecture, security compliance, and dedicated support for growing teams.",
-    icon: "Shield",
+      "Connect seamlessly with HubSpot, Salesforce, GoHighLevel, and other platforms your brokerage already uses.",
+    icon: "Link",
   },
   {
     id: 8,
-    title: "Scalable Solutions",
+    title: "Continuous Optimization",
     description:
-      "Start small and scale as you grow. Our modular approach lets you add automation as your business expands.",
-    icon: "Layers",
+      "We monitor, analyze, and refine your automations to ensure they perform better over time.",
+    icon: "RefreshCw",
   },
 ];

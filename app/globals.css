@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #0F172A;
-  --color-secondary: #2563EB;
-  --color-accent: #14B8A6;
-  --color-background: #FFFFFF;
+  --color-primary: #03002D;
+  --color-primary-accent: #324939;
+  --color-secondary-accent: #97D9C1;
+  --color-highlight: #FFF171;
+  --color-neutral: #E4E5D6;
   --color-foreground: #1E293B;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-dm-sans);
+  --font-body: var(--font-manrope);
 }
 
 html {
@@ -16,11 +17,15 @@ html {
 }
 
 body {
-  background: var(--color-background);
+  background: var(--color-white);
   color: var(--color-foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), system-ui, sans-serif;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-secondary) 20%, transparent);
+  background: color-mix(in srgb, var(--color-secondary-accent) 25%, transparent);
 }
