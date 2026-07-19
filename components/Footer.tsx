@@ -36,7 +36,12 @@ function FacebookIcon({ className }: { className?: string }) {
   );
 }
 
-const socialIconComponents = [LinkedInIcon, TwitterIcon, InstagramIcon, FacebookIcon];
+const socialIconComponents = [
+  LinkedInIcon,
+  TwitterIcon,
+  InstagramIcon,
+  FacebookIcon,
+];
 
 export default function Footer() {
   return (
@@ -44,12 +49,17 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <Link href="#home" className="inline-block" aria-label="NexXaBase Home">
+            <Link
+              href="#home"
+              className="inline-block"
+              aria-label="NexXaBase Home"
+            >
               <Image
                 src="https://nexxa-base-website.vercel.app/assets/imgs/nexxa/logo/logo.svg"
                 alt="NexXaBase Logo"
-                width={140}
-                height={32}
+                width={150} // Next.js requires baseline dimensions
+                height={50}
+                className="w-[120px] h-auto" // Forces the height to scale proportionally
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">

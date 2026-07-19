@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <Trusted />
+        {/* <Trusted /> */}
         <Services />
         <WhyChooseUs />
         <Process />
